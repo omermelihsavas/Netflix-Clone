@@ -4,15 +4,31 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #141414;
+}
+
+/* Main View */
+.main-view {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
 /* Header */
 .header {
   padding: 0 60px;
-  background: transparent;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 65px;
+  z-index: 5;
 }
 
 /* Left Side */
@@ -20,31 +36,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-} 
-    /* Logo */
-    .left-side .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+}
 
-    /* First Nav */
-    .left-side .nav {
-      margin: 0 20px;
-    }
+/* Logo */
+.left-side .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .nav .nav-list {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.left-side .logo .logo-icon {
+  cursor: pointer;
+}
 
-    .nav .nav-list .nav-item {
-      margin: 0 10px;
-      cursor: pointer;
-      color: #fff;
-    }
+/* First Nav */
+.left-side .nav {
+  margin: 0 20px;
+}
+
+.nav .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav .nav-list .nav-item {
+  margin: 0 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav .nav-list .nav-item:hover {
+  color: #b3b3b3;
+}
 
 /* Right Side */
 .header .right-side {
@@ -52,24 +77,282 @@
   align-items: center;
 }
 
-  .right-side .search-icon {
-    margin-right: 40px;
+.right-side .search-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.right-side .child-link {
+  margin-right: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.right-side .notification-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Right Side Settings */
+.right-side .settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.settings .profile-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+/* Trailer */
+.trailer {
+  width: 60%;
+}
+
+.trailer .movie-photo {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.trailer .movie-details {
+  padding: 15% 60px;
+}
+
+@media screen and (max-width: 850px) {
+  .movie-logo {
+    width: 300px;
+    height: 150px;
   }
 
-  /* Right Side Settings */
-  .right-side .settings {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .movie-info {
+    width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .movie-logo {
+    width: 200px;
+    height: 100px;
   }
 
-    .settings .profile-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 5px;
-      margin: 10px;
-    }
+  .movie-info {
+    width: 250px !important;
+  }
 
+  .btn {
+    padding: 0;
+  }
+  
+  .btn-text {
+    font-size: 10px !important;
+    padding: 15px  5px !important;
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .movie-logo {
+    width: 150px;
+    height: 100px;
+  }
 
+  .movie-info {
+    width: 200px !important; 
+  }
 
+  .btn {
+    padding: 0;
+  }
+
+  .btn-text {
+    font-size: 10px !important;
+    padding: 5px  5px !important;
+  }
+}
+
+.trailer .movie-details .movie-info {
+  margin-top: 20px;
+  color: #fff;
+  width: 600px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+  line-height: normal;
+  font-size: 1.4vw;
+  font-weight: 400;
+}
+
+.trailer .movie-details .movie-buttons {
+  display: flex;
+  margin-top: 30px;
+}
+
+.movie-buttons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+}
+
+.movie-buttons .btn-play {
+  background-color: #fff;
+  color: #000;
+}
+
+.movie-buttons .btn-play:hover {
+  background-color: #cbc7c4;
+}
+
+.movie-buttons .btn-text {
+  margin: 0;
+  font-size: 24px;
+  padding: 10px 0 10px 10px;
+  font-weight: 600;
+}
+
+.btn-info {
+  margin-left: 10px;
+  background-color: rgba(109, 109, 110, 0.7);
+  color: #fff;
+}
+
+.btn-info:hover {
+  background-color: rgba(109, 109, 110, 0.4);
+}
+
+/* Sliders */
+.container {
+  background-color: #141414;
+  margin: 20px 0;
+  padding: 10px 0 10px 60px;
+}
+
+.slider {
+  padding: 0 30px 0 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie-header {
+  color: #e5e5e5;
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+
+.prew-arrow {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-arrow {
+  height: 100%;
+  position: absolute;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 220px;
+  /* height: 125px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  color: grey;
+  margin: 20px auto 0;
+  margin-bottom: 30px;
+  max-width: 980px;
+  padding: 0 4%;
+}
+
+/* Footer Social Links */
+.footer-social-links {
+  margin: 50px 0;
+}
+
+.footer-social-list {
+  display: flex;
+  list-style: none;
+}
+
+.footer-social-item {
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+/* Footer Member Links */
+.footer-member-list {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 13px;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.footer-member-item {
+  flex: 0 0 25%;
+  list-style-type: none;
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 760px) {
+  .footer-member-item {
+    flex: 0 0 50%;
+  }
+}
+
+.footer-member-link {
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-member-link:hover {
+  text-decoration: underline;
+}
+
+.btn-service {
+  font-size: 22px;
+  padding: 10px;
+  background-color: transparent;
+  color: grey;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.btn-service:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+}
