@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   padding: 0;
@@ -153,10 +153,10 @@ html {
   .btn {
     padding: 0;
   }
-  
+
   .btn-text {
     font-size: 10px !important;
-    padding: 15px  5px !important;
+    padding: 15px 5px !important;
   }
 }
 
@@ -167,7 +167,7 @@ html {
   }
 
   .movie-info {
-    width: 200px !important; 
+    width: 200px !important;
   }
 
   .btn {
@@ -176,7 +176,7 @@ html {
 
   .btn-text {
     font-size: 10px !important;
-    padding: 5px  5px !important;
+    padding: 5px 5px !important;
   }
 }
 
@@ -358,4 +358,235 @@ html {
 
 .footer-copyright {
   margin-top: 20px;
+}
+
+.login {
+  position: relative;
+  height: 140vh;
+  width: 100%;
+}
+
+.login::before {
+  content: "";
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/5eab1b22-c5ea-48b0-8ef4-862b3fa6df2c/069f4301-2894-4ecd-b599-eea8a1997317/TR-tr-20230724-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+
+.login-header {
+  display: block;
+  position: relative;
+  padding: 10px 40px;
+}
+
+.login-body {
+  position: relative;
+  margin: 0 auto -236px;
+  max-width: 450px;
+  background-color: rgba(0, 0, 0, .75);
+  color: #fff;
+}
+
+.login-form {
+  padding: 60px 68px 40px;
+}
+
+.input-container input {
+  color: #fff;
+  margin: 20px 0;
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  background: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 16px 20px 0;
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container label {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  pointer-events: none;
+  transition: all 0.2s;
+  color: #8c8c8c;
+}
+
+.input-container .label-shrink {
+  top: 5px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.btn-login {
+  margin-top: 30px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  background: #e50914;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-help {
+  margin-top: 15px;
+  display: flex;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+.login-help .login-remember {
+  display: flex;
+  flex-grow: 1;
+}
+
+.custom-checkbox {
+  position: relative;
+  padding: 2px 0 0 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 20px;
+  background-color: #737373;
+  border-radius: 5px;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked~.checkmark::after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked~.checkmark {
+  background-color: #fff;
+}
+
+.login-help-link {
+  padding-top: 2px;
+  cursor: pointer;
+}
+
+.login-help-link:hover {
+  text-decoration: underline;
+}
+
+.login-form-other {
+  margin-top: 50px;
+}
+
+.login-signup {
+  color: #8c8c8c;
+  font-size: 16px;
+}
+
+.login-signup a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-signup a:hover {
+  text-decoration: underline;
+}
+
+.recaptcha {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #8c8c8c;
+}
+
+.recaptcha button {
+  background-color: transparent;
+  border: none;
+  color: #0071eb;
+  cursor: pointer;
+}
+
+.recaptcha button:hover {
+  text-decoration: underline;
+}
+
+.login-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .75);
+}
+
+.login-footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 0;
+  color: #8c8c8c;
+  font-size: 18px;
+}
+
+.login-footer-container a {
+  cursor: pointer;
+}
+
+.login-footer-container a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  margin-top: 30px;
+}
+
+.footer-link-item {
+  list-style-type: none;
+  display: inline-block;
+  margin-bottom: 16px;
+  min-width: 100px;
+  padding: 0 12px 0 0;
+  vertical-align: top;
+  width: 25%;
+  font-size: 13px;
 }
