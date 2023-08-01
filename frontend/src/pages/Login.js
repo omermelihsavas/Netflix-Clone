@@ -22,12 +22,22 @@ export default function Login() {
                     <h1>Oturum Aç</h1>
                     <form action="">
                         <div className="input-container">
-                            <input type="email" id="id_email" onClick={() => setFirstFocused(true)} onBlur={() => setFirstFocused(false)} />
+                            <input 
+                                type="email" 
+                                id="id_email" 
+                                onClick={() => setFirstFocused(true)} 
+                                onBlur={(e) => e.target.value === "" ? setFirstFocused(false) : setFirstFocused(true)} 
+                            />
                             <label className={firstFocused ? 'label-shrink' : ''} htmlFor="id_email">E-posta veya telefon numarası</label>
                         </div>
 
                         <div className="input-container">
-                            <input type="password" id="id_password" onClick={() => setSecondFocused(true)} onBlur={() => setSecondFocused(false)} />
+                            <input 
+                                type="password" 
+                                id="id_password" 
+                                onClick={() => setSecondFocused(true)} 
+                                onBlur={(e) => e.target.value === "" ? setSecondFocused(false) : setSecondFocused(true)} 
+                            />
                             <label className={secondFocused ? 'label-shrink' : ''} htmlFor="id_password">Parola</label>
                         </div>
 

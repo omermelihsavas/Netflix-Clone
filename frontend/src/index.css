@@ -590,3 +590,29 @@ html {
   width: 25%;
   font-size: 13px;
 }
+
+.warning-message {
+  background: #e87c03;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.warning-message p {
+  padding: 10px 20px;
+}
+
+.success-message {
+  background: #15d612;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.success-message p {
+  padding: 10px 20px;
+}
+
+.success-message a {
+  color: #fff;
+}
