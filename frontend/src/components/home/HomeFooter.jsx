@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import "../styles/Footer.css";
 
-export default function Footer() {
+export default function HomeFooter() {
     return (
         <footer className='footer'>
             <div className="footer-social-links">

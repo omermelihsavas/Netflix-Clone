@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faInfo } from '@fortawesome/free-solid-svg-icons'
+import "../styles/Trailer.css"
 
 export default function Trailer() {
   return (
@@ -65,17 +66,17 @@ export default function Trailer() {
           </g>
         </svg>
 
-        <p className='movie-info'>Breaking Bad'in öncesini anlatan Emmy adayı dizide, ufak çaplı avukat Jimmy McGill'in ahlak yoksunu "hukuk adamı" Saul Goodman'a dönüşmesini izliyoruz.</p>
+        <p className='p-info'>Breaking Bad'in öncesini anlatan Emmy adayı dizide, ufak çaplı avukat Jimmy McGill'in ahlak yoksunu "hukuk adamı" Saul Goodman'a dönüşmesini izliyoruz.</p>
 
         <div className="movie-buttons">
           <button className='btn btn-play'>
             <FontAwesomeIcon icon={faPlay} size='2xl' style={{ color: "#000000" }} />
-            <p className='btn-text'>Oynat</p>
+            <p className='p-btn-text'>Oynat</p>
           </button>
 
           <button className='btn btn-info'>
             <FontAwesomeIcon icon={faInfo} size="xl" style={{ color: "#ffffff", border: "2px solid #fff", padding: "5px 12px", borderRadius: "50%" }} />
-            <p className='btn-text'>Daha Fazla Bilgi</p>
+            <p className='p-btn-text'>Daha Fazla Bilgi</p>
           </button>
         </div>
       </div>

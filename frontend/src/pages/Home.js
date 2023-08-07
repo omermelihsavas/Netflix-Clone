@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from '../components/Header'
-import Trailer from '../components/Trailer'
-import FilmSlider from '../components/FilmSlider'
-import TvSeriesSlider from '../components/TvSeriesSlider'
-import TopFilmSlider from '../components/TopFilmSlider'
-import TopSeriesSlider from '../components/TopSeriesSlider'
-import PopularSlider from '../components/PopularSlider'
-import Footer from '../components/Footer'
+import Header from '../components/home/Header'
+import Trailer from '../components/home/Trailer'
+import FilmSlider from '../components/home/FilmSlider'
+import TvSeriesSlider from '../components/home/TvSeriesSlider'
+import TopFilmSlider from '../components/home/TopFilmSlider'
+import TopSeriesSlider from '../components/home/TopSeriesSlider'
+import PopularSlider from '../components/home/PopularSlider'
+import HomeFooter from '../components/home/HomeFooter'
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <FilmSlider />
       <TopSeriesSlider />
       <TvSeriesSlider />
-      <Footer />
+      <HomeFooter />
     </div>
   )
 }

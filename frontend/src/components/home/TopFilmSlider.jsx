@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useRef, useState } from "react";
 import NextArrow from "./NextArrow";
 import PrewArrow from "./PrewArrow";
+import "../styles/Slider.css";
 
 let slidesToShow = 6;
 

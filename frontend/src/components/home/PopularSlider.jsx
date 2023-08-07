@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import MovieCard from "./MovieCard";
 import NextArrow from "./NextArrow";
 import PrewArrow from "./PrewArrow";
+import "../styles/Slider.css";
+
 
 let slidesToShow = 6;
 
@@ -29,7 +31,7 @@ function NextArrowComp(props) {
                 <div className={className} onClick={onClick}>
                     <NextArrow />
                 </div>
-                
+
             )}
         </>
     );

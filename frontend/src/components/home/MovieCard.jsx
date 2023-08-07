@@ -1,4 +1,5 @@
 import React from 'react'
+import "../styles/Slider.css";
 
 export default function MovieCard({poster_path, name}) {
   return (

@@ -1,0 +1,67 @@
+.trailer {
+    width: 60%;
+}
+
+.trailer img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.trailer .movie-details {
+    padding: 15% 60px;
+}
+
+.trailer .movie-details .p-info {
+    margin-top: 20px;
+    color: #fff;
+    width: 600px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+    line-height: normal;
+    font-size: 1.4vw;
+    font-weight: 400;
+}
+
+.trailer .movie-details .movie-buttons {
+    display: flex;
+    margin-top: 30px;
+}
+
+.trailer .movie-details .movie-buttons .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+}
+
+.trailer .movie-details .movie-buttons .btn-play {
+    background-color: #fff;
+    color: #000;
+}
+
+.trailer .movie-details .movie-buttons .btn-play:hover {
+    background-color: #cbc7c4;
+}
+
+.trailer .movie-details .movie-buttons .btn-info {
+    margin-left: 10px;
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #fff;
+}
+
+.trailer .movie-details .movie-buttons .btn-info:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+}
+
+.trailer .movie-details .movie-buttons button .p-btn-text {
+    margin: 0;
+    font-size: 24px;
+    padding: 10px 0 10px 10px;
+    font-weight: 600;
+}
