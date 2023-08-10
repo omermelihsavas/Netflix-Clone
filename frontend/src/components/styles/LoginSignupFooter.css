@@ -10,14 +10,16 @@
 .signup-footer-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 30px 0;
-  color: #8c8c8c;
+  padding: 30px 30px;
   font-size: 18px;
+  color: #8c8c8c;
 }
 
 .login-footer-container a,
 .signup-footer-container a {
   cursor: pointer;
+  color: #8c8c8c;
+  text-decoration: none;
 }
 
 .login-footer-container a:hover,
@@ -38,4 +40,10 @@
   vertical-align: top;
   width: 25%;
   font-size: 13px;
+}
+
+@media screen and (max-width: 650px) {
+  .footer-link-item {
+      width: 50%;
+  }
 }

@@ -3,7 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faCaretUp, faBell, faXmark, faPencil, faArrowRotateRight, faUser, faQuestion } from '@fortawesome/free-solid-svg-icons'
 import "../styles/Header.css";
 
+import { useLogout } from '../../hooks/UseLogout';
+import { useAuthContext } from '../../hooks/UseAuthContext';
+
 export default function Header() {
+    const { logout } = useLogout();
+    const { user } = useAuthContext();
+    
     const [scrollPos, setScrollPos] = useState(false);
     const [searchFocused, setSearchFocused] = useState(false);
     const [showSearchInput, setShowSearchInput] = useState(false);
@@ -28,6 +34,10 @@ export default function Header() {
             }
         };
     }, [setScrollPos]);
+
+    const handleLogout = () => {
+        logout();
+    }
 
     return (
         <div style={scrollPos ? { backgroundColor: "rgba(20,20,20)", position: "fixed", transition: "all 0.7s" } : { backgroundColor: "transparent", position: "absolute", transition: "all 0.7s" }} className='header'>
@@ -133,11 +143,11 @@ export default function Header() {
                         <ul className='settings-list'>
                             <li className="settings-item">
                                 <img className="profile-icon" src="https://occ-0-2773-784.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdYJV5wt63AcxNaDoqDXUhqZb55oN5Dxt1m-Zdn_z5rn_hIq9m8dA8JB2xdcPmrY3yXnlVWYKPXnOrbv2QN4aEVU28dESJg.png?r=1d4" alt="profile-icon" />
-                                USER
+                                {user && <p>{user.email}</p>}
                             </li>
                             <li className="settings-item">
                                 <img className="profile-icon" src="https://occ-0-2773-784.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABSabysfbatDkmDvtUfjq2DZ8w9wBqOH8v3ZWUBy2huiv_KyjE_GLuCsGUyFADtHs73cbIYg9zg5XdN9JawQ1bpb5hisQC80.png?r=533" alt="kids-icon" />
-                                Çocuk
+                                <p>Çocuk</p>
                             </li>
                             <li className="settings-item">
                                 <FontAwesomeIcon
@@ -146,7 +156,7 @@ export default function Header() {
                                     size="2xl"
                                     style={{ color: "#8c8c8c" }}
                                 />
-                                Profil Yönetimi
+                                <p>Profil Yönetimi</p>
                             </li>
                             <li className="settings-item">
                                 <FontAwesomeIcon
@@ -155,7 +165,7 @@ export default function Header() {
                                     size="2xl"
                                     style={{ color: "#8c8c8c" }}
                                 />
-                                Profil Aktar
+                                <p>Profil Aktar</p>
                             </li>
                             <li className="settings-item">
                                 <FontAwesomeIcon
@@ -164,7 +174,7 @@ export default function Header() {
                                     size="2xl"
                                     style={{ color: "#8c8c8c" }}
                                 />
-                                Hesap
+                                <p>Hesap</p>
                             </li>
                             <li className="settings-item">
                                 <FontAwesomeIcon
@@ -173,10 +183,10 @@ export default function Header() {
                                     size="2xl"
                                     style={{ color: "#8c8c8c" }}
                                 />
-                                Yardım Merkezi
+                                <p>Yardım Merkezi</p>
                             </li>
                             <li className="settings-item logout item-icon">
-                                Netflix oturumunu kapat
+                                <button onClick={handleLogout} className='btn-logout'>Netflix oturumunu kapat</button>
                             </li>
                         </ul>
                     </div>

@@ -10,12 +10,11 @@ const userSchema = new schema({
         required: true,
         unique: true
     },
-
     password: {
         type: String,
         required: true
     }
-});
+})
 
 userSchema.statics.signup = async function(email, password) {
     if (!email || !password) {
@@ -23,25 +22,25 @@ userSchema.statics.signup = async function(email, password) {
     }
 
     if (!validator.isEmail(email)) {
-        throw Error('E-mail kurallara uygun değil...');
+        throw Error('Email alanının lütfen doğru şekilde giriniz...');
     }
 
-    if (!validator.isStrongePassword(password)) {
-        throw Error('Parola yeterince güçlü değil...');
+    if (!validator.isStrongPassword(password)) {
+        throw Error('Girdiğiniz parola yeterince güçlü değil. Lütfen tekrar deneyiniz...');
     }
-    
+
     const controlUser = await this.findOne({ email });
 
     if (controlUser) {
-        throw Error('E-mail zaten kullanılıyor...');
+        throw Error('Email zaten kullanılıyor...');
     }
 
     const salt = await bcrypt.genSalt(10);
-    const encryptedPassword = await bcrypt.hash(password, salt); 
-    const user = await this.create({ email, password:encryptedPassword });
+    const encrytedPassword = await bcrypt.hash(password, salt);
+    const user = await this.create({email, password:encrytedPassword});
 
-    return user;
-};
+    return user
+}
 
 userSchema.statics.login = async function(email, password) {
     if (!email || !password) {
@@ -51,16 +50,16 @@ userSchema.statics.login = async function(email, password) {
     const user = await this.findOne({ email });
 
     if (!user) {
-        throw Error('E-mail bulunamadı...');
+        throw Error('Email bulunamadı. Lütfen tekrar deneyiniz...');
     }
 
     const controlPassword = await bcrypt.compare(password, user.password);
 
     if (!controlPassword) {
-        throw Error('Hatalı parola girdiniz...');
+        throw Error('Hatalı parola girdiniz. Lütfen tekrar deneyiniz...');
     }
 
-    return user;
+    return user
 }
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema)

@@ -210,11 +210,23 @@
     border-top: 1px solid #fff;
 }
 
+.btn-logout {
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    margin: auto;
+    font-size: 16px;
+}
+
 .settings-open ul li {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 10px;
+}
+
+.settings-open li:hover {
+    text-decoration: underline;
 }
 
 .settings-open .item-icon {
